@@ -2,6 +2,7 @@ telethon
 telethon-session-sqlalchemy
 setuptools
 package_name
+zira
 wheel
 aiofiles
 aiohttp
