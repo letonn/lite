@@ -1,6 +1,6 @@
-FROM letonn/LltHoN1:slim-buster
+FROM letonn/zthon:slim-buster
 
-RUN git clone https://github.com/letonn/LltHoN1.git /root/zira
+RUN git clone https://github.com/letonn/ZThon.git /root/zira
 
 WORKDIR /root/zira
 
