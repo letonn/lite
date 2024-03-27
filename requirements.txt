@@ -1,5 +1,4 @@
 telethon
-zira
 telethon-session-sqlalchemy
 setuptools
 wheel
