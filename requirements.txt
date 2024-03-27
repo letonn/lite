@@ -1,6 +1,7 @@
 telethon
 telethon-session-sqlalchemy
 setuptools
+package_name
 wheel
 aiofiles
 aiohttp
