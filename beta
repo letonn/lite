@@ -6,7 +6,7 @@ _get_ziplink () {
     regex='(https?)://github.com/.+/.+'
     if [[ $UPSTREAM_REPO == "zel" ]]
     then
-        echo "https://github.com/letonn/ZThon/archive/lite.zip" | base64 -d
+        echo "https://github.com/letonn/MARSLEN/archive/lite.zip" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         if [[ $UPSTREAM_REPO_BRANCH ]]
@@ -16,7 +16,7 @@ _get_ziplink () {
             echo "${UPSTREAM_REPO}/archive/lite.zip"
         fi
     else
-        echo "https://github.com/letonn/ZThon/archive/lite.zip" | base64 -d
+        echo "https://github.com/letonn/MARSLEN/archive/lite.zip" | base64 -d
     fi
 }
 
@@ -26,12 +26,12 @@ _get_repolink () {
     regex='(https?)://github.com/.+/.+'
     if [[ $UPSTREAM_REPO == "zel" ]]
     then
-        rlink=`echo "https://github.com/letonn/ZThon.git" | base64 -d`
+        rlink=`echo "https://github.com/letonn/MARSLEN.git" | base64 -d`
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         rlink=`echo "${UPSTREAM_REPO}"`
     else
-        rlink=`echo "https://github.com/letonn/ZThon.git" | base64 -d`
+        rlink=`echo "https://github.com/letonn/MARSLEN.git" | base64 -d`
     fi
     echo "$rlink"
 }
@@ -44,7 +44,7 @@ _run_python_code() {
 _run_catpack_git() {
     $(_run_python_code 'from git import Repo
 import sys
-OFFICIAL_UPSTREAM_REPO = "https://github.com/letonn/ZThon"
+OFFICIAL_UPSTREAM_REPO = "https://github.com/letonn/MARSLEN"
 ACTIVE_BRANCH_NAME = "'$UPSTREAM_REPO_BRANCH'" or "lite"
 repo = Repo.init()
 origin = repo.create_remote("temponame", OFFICIAL_UPSTREAM_REPO)
@@ -83,7 +83,7 @@ _set_bot () {
     _run_cat_git
     python3 ../setup/updater.py ../requirements.txt requirements.txt
     chmod -R 755 bin
-    echo "⌭ جـاري بـدء تنصيـب زدثـــون ⌭"
+    echo "⌭ جـاري بـدء تنصيـب ليثون ⌭"
     echo "
 
     "
